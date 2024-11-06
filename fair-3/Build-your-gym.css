@@ -1,0 +1,318 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x:hidden;
+}
+.box-header{
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    position: fixed;
+    z-index: 10;
+}
+header {
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 11;
+    background-color: black;
+    width: 100%;
+    height: 2%;
+}
+.navbar{
+    margin: 0 26%;
+    position: fixed;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.navbar li {
+    margin: 0 29px;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #00ff00;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00ff00;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-left, .footer-right, .footer-center {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+.footer-left p, .footer-right p, .footer-center p, .footer-left a {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+.footer-right p {
+    font-weight: bold;
+}
+.footer-left a, .footer-right a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+}
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 8px 0;
+    display: inline-block;
+    font-size: 0.9em;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons a {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: #fff;
+}
+.payment-icons img {
+    width: 50px;
+    margin: 10px 5px;
+    vertical-align: middle;
+}
+.footer-bottom-text {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+.header {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    padding: 10%;
+}
+.header h1 {
+    font-size: 2.5em;
+    color: #000;
+    margin: 0;
+}
+.header p {
+    color: #333;
+    margin-top: 3%;
+}
+.buttons {
+    margin: 3% 0;
+}
+button {
+    padding: 1% 2%;
+    margin: 5px 3%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3em;
+    border-radius: 12px;
+}
+.setup {
+    background-color: #4CAF50;
+    color: #fff;
+}
+  
+.maintenance {
+    background-color: #C0C0C0;
+    color: #fff;
+}
+.interior {
+    background-color: #000;
+    color: #fff;
+}
+.terms {
+    color: #888;
+    font-size: 0.8em;
+}
+.terms a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  .services-2 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .service {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .service img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .service h2 {
+    font-size: 1.5em;
+    color: #000;
+  }
+  
+  .service p {
+    color: #666;
+  }
+  
+  .catalog-link {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .catalog-link:hover {
+    text-decoration: underline;
+  }
+  :root {
+	--index: calc(1vw + 1vh);
+	--transition: cubic-bezier(.1, .7, 0, 1);
+}
+.container-10 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    margin: 0 40%;
+}
+.images {
+	display: flex;
+	gap: .4rem;
+	perspective: calc(var(--index) * 35);
+}
+.image {
+	background-color: #222;
+	width: calc(var(--index) * 3);
+	height: calc(var(--index) * 12);
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+	transition: transform 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+	will-change: transform, filter;
+	filter: grayscale() brightness(.5);
+}
+.image::before, .image::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 100%;
+	right: calc(var(--index) * -1);
+}
+.image::after {
+	left: calc(var(--index) * -1);
+}
+.images .image:hover {
+	transform: translateZ(calc(var(--index) * 10));
+	filter: inherit;
+}
+.images .image:hover + * {
+	transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+	filter: inherit;
+	z-index: -1;
+}
+.images .image:hover + * + * {
+	transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+	filter: inherit;
+	z-index: -2;
+}
+.images .image:hover + * + * + * {
+	transform: translateZ(calc(var(--index) * 2.4)) rotateY(30deg);
+	filter: inherit;
+	z-index: -3;
+}
+.images .image:hover + * + * + * + * {
+	transform: translateZ(calc(var(--index) * .6)) rotateY(14deg);
+	filter: inherit;
+	z-index: -4;
+}
+.image:has(+ :hover) {
+	transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+	filter: inherit;
+}
+.image:has(+ * + :hover) {
+	transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+	filter: inherit;
+}
+.image:has(+ * + * + :hover) {
+	transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
+	filter: inherit;
+}
+.image:has(+ * + * + * + :hover) {
+	transform: translateZ(calc(var(--index) * .6)) rotateY(-14deg);
+	filter: inherit;
+}
+.images .image:active, .images .image:focus {
+	width: 28vw;
+	transform: translateZ(calc(var(--index) * 10));
+	filter: inherit;
+	z-index: 100;
+	margin: 0 .45vw;
+}
+  
+@media screen and (max-width: 375px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
